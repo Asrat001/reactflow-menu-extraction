@@ -1,4 +1,4 @@
-import { GitFork, Github, Workflow } from 'lucide-react'
+import { Github, Workflow } from 'lucide-react'
 
 
 export function Header() {

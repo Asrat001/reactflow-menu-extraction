@@ -6,7 +6,7 @@ An implementation of a node based Menu Extractor using react flow
 
 To get started with this application, you will need to follow these steps:
 
-1. Clone the repository: `git clone https://github.com/PixeledCode/react-flow.git`
+1. Clone the repository: `git clone https://github.com/Asrat001/reactflow-menu-extraction`
 2. Install dependencies: `pnpm install`
 3. Start the development server: `pnpm run dev`
 4. Open the application in your browser at http://localhost:5173

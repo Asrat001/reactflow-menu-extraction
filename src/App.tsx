@@ -42,7 +42,8 @@ export default function App() {
 	const [nnodes, setNNodes] = useState<Node[]>([]);
 
 	const handleExtract = () => {
-		const regex = /\d+\.\s[A-Za-z\s]+/g;
+		const regex = /\d+\s*[:\.]\s*[A-Za-z\s]+/g
+
 		const matches = text.match(regex);
 	
 		if (matches && matches.length > 0) {

@@ -1,28 +1,11 @@
 import { Workflow } from 'lucide-react'
-import { useStore } from 'reactflow'
-import {  useToast } from './ui'
+
 
 export function Header() {
-	const { toast } = useToast()
-	const nodesWithoutTarget = useStore((store) =>
-		store
-			.getNodes()
-			.filter((node) => !store.edges.some((edge) => edge.target === node.id))
-	)
+	
 
-	function handleSaveClick() {
-		const isValid = nodesWithoutTarget.length < 2
-		if (isValid) {
-			toast({
-				description: 'Saved successfully.',
-			})
-		} else {
-			toast({
-				description: 'Please connect all nodes.',
-				variant: 'destructive',
-			})
-		}
-	}
+
+
 
 	return (
 		<header className="py-2 px-4 shadow-sm flex justify-between gap-3 flex-wrap">

@@ -16,7 +16,7 @@ export const nodesConfig = {
 	id: `2`,
 	type: 'textNode',
 	data:  {
-		label: '1. Beyayentu',
+		label: '3. Beyayentu',
 		
 	},
 	position: { x:  600, y: Math.random()*200 },

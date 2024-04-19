@@ -1,6 +1,6 @@
 import { Workflow } from 'lucide-react'
 import { useStore } from 'reactflow'
-import { Button, useToast } from './ui'
+import {  useToast } from './ui'
 
 export function Header() {
 	const { toast } = useToast()

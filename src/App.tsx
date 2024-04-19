@@ -15,6 +15,7 @@ import useStore from './config/store'
 import { handleDragOver, handleOnDrop } from './lib/utils'
 import { Button } from './components/ui'
 import { ArrowLeft } from 'lucide-react'
+import { toast } from './components/ui/toast/use-toast'
 
 const selector = (state: {
 	nodes: Node[]
@@ -59,7 +60,10 @@ export default function App() {
 		})
 		 
 		} else {
-		 
+			toast({
+				description: 'Please enter Valid data',
+				variant: 'destructive',
+			})
 		}
 	  };
 	const {

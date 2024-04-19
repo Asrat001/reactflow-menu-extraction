@@ -29,7 +29,7 @@ export function Header() {
 			<div className="flex gap-2 items-center">
 				<Workflow size={24} />
 				<h1 className="text-xl font-bold text-center sm:text-2xl">
-				Menu Extractor by by Asrat
+				Menu Extractor and Visualization by by Asrat
 				</h1>
 			</div>
 			<Button size="sm" onClick={handleSaveClick}>

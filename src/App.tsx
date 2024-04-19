@@ -71,6 +71,7 @@ export default function App() {
 		setSelectedNode,
 		setNodes,
 	} = useStore(selector, shallow)
+	
 
 	const onDragOver = React.useCallback(
 		(event: React.DragEvent<HTMLDivElement>) => {
@@ -90,35 +91,7 @@ export default function App() {
 		<ReactFlowProvider>
 			<Header />
 			<main className="flex">
-				<div
-					className="h-[calc(100vh_-_48px)] flex-grow"
-					ref={reactFlowWrapper}
-				>
-					<ReactFlow
-						nodes={nodes}
-						edges={edges}
-						onNodesChange={onNodesChange}
-						onEdgesChange={onEdgesChange}
-						onNodeClick={(event: React.MouseEvent, node: Node) => {
-							setSelectedNode(node)
-						}}
-						onConnect={onConnect}
-						onPaneClick={() => {
-							setSelectedNode(null)
-						}}
-						onDragOver={onDragOver}
-						onDrop={onDrop}
-						fitView
-						fitViewOptions={{ maxZoom: 1 }}
-						onInit={setReactFlowInstance}
-						snapToGrid={true}
-						nodeTypes={nodesConfig.nodeTypes}
-					>
-						<Controls />
-						<Background variant={BackgroundVariant.Dots} gap={12} size={1} />
-					</ReactFlow>
-				</div>
-				<div className="hidden basis-[300px] md:block lg:basis-[350px]">
+			<div className="hidden basis-[300px] md:block lg:basis-[350px]">
 				<>
 			<div className="p-2 font-semibold flex">
 				<button
@@ -144,6 +117,7 @@ export default function App() {
 						rows={4}
 						name="message"
 						id="message"
+						placeholder='1. Shiro '
 						onChange={(e) => setText(e.target.value)}
 						className="border block w-full border-gray-300 rounded-md sm:text-sm p-2"
 					/>
@@ -156,6 +130,31 @@ export default function App() {
 			</div>
 			<Panel/>
 		</>
+				</div>
+				<div
+					className="h-[calc(100vh_-_48px)] flex-grow"
+					ref={reactFlowWrapper}
+				>
+					<ReactFlow
+						nodes={nodes}
+						edges={edges}
+						onNodesChange={onNodesChange}
+						onEdgesChange={onEdgesChange}
+						onConnect={onConnect}
+						onPaneClick={() => {
+							setSelectedNode(null)
+						}}
+						onDragOver={onDragOver}
+						onDrop={onDrop}
+						fitView
+						fitViewOptions={{ maxZoom: 1 }}
+						onInit={setReactFlowInstance}
+						snapToGrid={true}
+						nodeTypes={nodesConfig.nodeTypes}
+					>
+						<Controls />
+						<Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+					</ReactFlow>
 				</div>
 			</main>
 		</ReactFlowProvider>

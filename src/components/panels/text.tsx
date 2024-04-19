@@ -33,7 +33,7 @@ export const TextPanel = () => {
 				>
 					<ArrowLeft />
 				</button>
-				<h2 className="flex-grow text-center">Message</h2>
+				<h2 className="flex-grow text-center">Edit Menu</h2>
 			</div>
 			<hr />
 

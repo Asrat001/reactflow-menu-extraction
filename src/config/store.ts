@@ -30,6 +30,7 @@ type RFState = {
 	onEdgesChange: OnEdgesChange
 	onConnect: OnConnect
 	updateNodeLabel: (nodeId: string, nodeVal: string) => void
+	deleteNode:(nodeId:string)=> void
 	setSelectedNode: (node: Node | null) => void
 }
 
@@ -92,6 +93,13 @@ const useStore = create<RFState>((set, get) => ({
 			}),
 		})
 	},
+	deleteNode:(nodeId:string)=>{
+		set({
+			nodes: get().nodes.filter(node => node.id != nodeId)
+				
+		
+		})
+	}
 }))
 
 export default useStore

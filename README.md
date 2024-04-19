@@ -69,4 +69,5 @@ Currently, the application only supports a single type of Node (Text). To add a 
 4. Add the new panel to the `getPanel` function in the `src/components/panel` file.
 5. Add the update logic for the new Node in the zustand store in `src/config/store`.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 

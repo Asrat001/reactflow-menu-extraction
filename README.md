@@ -1,4 +1,5 @@
-# React Flow
+# Menu Extractor and Visualization by by Asrat
+
 
 An implementation of a node based Menu Extractor using react flow
 

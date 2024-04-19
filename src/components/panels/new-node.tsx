@@ -26,7 +26,8 @@ export const AddNodePanel = () => {
 					draggable
 				>
 					<MessagesSquare color="hsl(222.2,47.4%,11.2%)" size="32" />
-					<p className=' text-black'>Drag this to the Canvas to create new node</p>
+					<p className=' text-black text-[12px]'>Drag this to the Canvas to create new node</p>
+					<p className=' text-[9px] text-primary/80 block sm:hidden'> this feature only works in desktop browser</p>
 					<span className="font-semibold text-primary">Add new Menu</span>
 				</div>
 			</div>

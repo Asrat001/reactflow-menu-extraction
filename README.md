@@ -2,6 +2,7 @@
 
 
 An implementation of a node based Menu Extractor using react flow
+![GIF Preview](./src/assets/demo.gif)
 
 ## Installation
 
@@ -56,7 +57,7 @@ Some of the key features of the application include:
 - Validating Graph Integrity.
 - Offline Functionality with PWA.
 
-![GIF Preview](./src/assets/demo.gif)
+
 
 
 ## Styling

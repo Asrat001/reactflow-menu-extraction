@@ -56,6 +56,9 @@ Some of the key features of the application include:
 - Validating Graph Integrity.
 - Offline Functionality with PWA.
 
+![GIF Preview](./src/assets/demo.gif)
+
+
 ## Styling
 
 The application uses [Tailwind CSS](https://tailwindcss.com/) for styling.

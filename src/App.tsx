@@ -94,9 +94,8 @@ export default function App() {
 	return (
 		<ReactFlowProvider>
 			<Header />
-			<main className="flex">
-			<div className="hidden basis-[300px] md:block lg:basis-[350px]">
-				<>
+			<main className="flex flex-col sm:flex-row">
+			<div className=" basis-[300px] md:block lg:basis-[350px]">
 			<div className="p-2 font-semibold flex">
 				<button
 					onClick={() => {
@@ -134,7 +133,6 @@ export default function App() {
 				
 			</div>
 			<Panel/>
-		</>
 				</div>
 				<div
 					className="h-[calc(100vh_-_48px)] flex-grow"

@@ -1,5 +1,4 @@
 import { TextNode } from '@/components/nodes'
-import { Position } from 'reactflow'
 import { Edge, Node } from 'reactflow'
 
 export const nodesConfig = {

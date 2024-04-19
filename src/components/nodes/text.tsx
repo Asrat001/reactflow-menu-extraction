@@ -6,7 +6,7 @@ import { Edge, Handle, Node, Position, getConnectedEdges } from 'reactflow'
 import { shallow } from 'zustand/shallow'
 import { Button } from '../ui'
 import DropDownMenu from '../ui/dropDownMenu'
-import 'react-dropdown/style.css';
+
 
 
 const selector = (state: {
@@ -31,13 +31,8 @@ export const TextNode = memo((node: Node) => {
 	const [open ,SetOpen] = React.useState(false);
 	const { data, selected, id } = node
 	const {
-		nodes,
 		edges,
-		onNodesChange,
-		onEdgesChange,
-		onConnect,
-		setSelectedNode,
-		setNodes,
+		
 	} = useStore(selector, shallow)
 	
 	const alledges = getConnectedEdges([node], edges)
@@ -49,12 +44,7 @@ export const TextNode = memo((node: Node) => {
 			}
 		})
 	}, [alledges, id])
-	const HandelEditClick:(node: Node)=>void=()=>() => {
-		setSelectedNode(node)
-	}
-	const HandelDelet=()=>{
-		
-	}
+
 	
 	return (
 		<div

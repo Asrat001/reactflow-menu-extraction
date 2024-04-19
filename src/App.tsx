@@ -39,7 +39,7 @@ export default function App() {
 	const reactFlowWrapper = React.useRef<any>(null)
 	const [reactFlowInstance, setReactFlowInstance] = React.useState<any>(null)
 	const [text, setText] = useState<string>('');
-	const [nnodes, setNNodes] = useState([]);
+	const [nnodes, setNNodes] = useState<Node[]>([]);
 
 	const handleExtract = () => {
 		const regex = /\d+\.\s[A-Za-z\s]+/g;

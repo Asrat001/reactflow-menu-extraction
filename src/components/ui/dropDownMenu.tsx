@@ -1,26 +1,16 @@
-import ReactFlow, {
-	Edge,
+import{
 	Node,
 } from 'reactflow'
 import  useStore  from '../../config/store'
 import { shallow } from 'zustand/shallow'
+
 const selector = (state: {
-	nodes: Node[]
-	edges: Edge[]
-	onNodesChange: any
-	onEdgesChange: any
-	onConnect: any
-  open:boolean
+
   deleteNode:(nodeId:string) => void
-  setOpen:(open:boolean) =>void
 	setSelectedNode: (node: Node | null) => void
 	setNodes: (node: Node) => void
 }) => ({
-	nodes: state.nodes,
-	edges: state.edges,
-	onNodesChange: state.onNodesChange,
-	onEdgesChange: state.onEdgesChange,
-	onConnect: state.onConnect,
+	
 	setSelectedNode: state.setSelectedNode,
 	setNodes: state.setNodes,
   deleteNode:state.deleteNode
@@ -31,7 +21,6 @@ interface MyComponentProps {
 
 const DropDownMenu:React.FC<MyComponentProps> = ({node}) => {
   const {
-	
 		setSelectedNode,
     deleteNode,
     setNodes
